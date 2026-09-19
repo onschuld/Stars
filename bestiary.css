@@ -1,0 +1,165 @@
+.postrow_postcontainer {
+   width: 100%!important;
+   position: relative;
+   border: 0px;
+   background: transparent;
+   margin: 0px;
+}
+
+.post__row_left {
+   position: absolute;
+   height: 400px;
+}
+
+a.ava_link {
+   display: none;
+}
+
+.post_pseudo.gentit {
+   display: none;
+}
+
+.bestiary_name {
+    left: 30px;
+    position: absolute;
+    clip-path: var(--titclip);
+    background: var(--stars_grad);
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textcoloraccent2);
+    font-family: var(--titfont2);
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 5px;
+    margin: 0px;
+    text-align: center;
+    width: 300px;
+    height: 38px;
+    top: -20px;
+}
+
+.bestiary_name::after {
+   position: absolute;
+   left: 2px;
+   top: 2px;
+   content: "";
+   width: calc(100% - 4px);
+   height: calc(100% - 4px);
+   z-index: -1;
+   clip-path: var(--titclip);
+   background: linear-gradient(180deg, black, #1e1e1e);
+}
+
+.bestiary_species {
+   display: none;
+}
+
+.post_message.postbody.content {
+   width: 100%;
+   height: 400px;
+   top: 0px;
+   margin: 0px;
+}
+
+.bestiary_entry {
+   width: calc(100% - 380px);
+   height: 400px;
+   overflow: hidden;
+   margin-left: auto;
+   border: var(--stars_border);
+   background: var(--stars_bgc2);
+   padding: 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.bestiary_entry br {
+   display: none;
+}
+
+img.bestiary_pic {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    left: 30px;
+    top: 50px;
+    position: absolute;
+    border: 2px solid #ffffff40;
+}
+
+.bestiary_text {
+   padding: 85px;
+}
+
+.bestiary_text br {
+   display: unset;
+}
+
+.best_bottom {
+   width: 100%;
+   height: 100px;
+   background: var(--stars_bgc5);
+   border-top: var(--stars_border);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.bestiary_habitat, .bestiary_genus, .bestiary_tags {
+    text-align: center;
+    width: 30%;
+    display: block;
+    position: relative;
+    margin-top: 15px;
+}
+
+.bestiary_habitat::before, .bestiary_genus::before, .bestiary_tags::before {
+   content: "title";
+   font-family: var(--titfont);
+   font-size: 16px;
+   position: absolute;
+   margin-top: -22px;
+   text-align: center;
+   width: 100%;
+   left: 0px;
+   color: #B9B09F;
+}
+
+.bestiary_habitat::before { content: "Habitat"; }
+.bestiary_genus::before { content: "Genus"; }
+.bestiary_tags::before { content: "Tags"; }
+
+.bestiary_tags {display: flex;justify-content: center;gap: 5px;}
+
+.besttag {
+    width: 25px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border: var(--stars_border);
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 5px;
+    background: var(--stars_bgc5);
+    display: flex;
+}
+
+.besttag::before {
+    width: 13px;
+    aspect-ratio: 1 / 1;
+    content: "";
+    position: absolute;
+    background: var(--besttag);
+    background-size: contain;
+    filter: invert(1);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#petfriendly {--besttag: url(https://2img.net/i.imgur.com/6RuAwZW.png);}
+#ridable {--besttag: url(https://2img.net/i.imgur.com/UJMcwir.png);}
+#dangerous {--besttag: url(https://2img.net/i.imgur.com/Ay4sasI.png);}
+#mythic {--besttag: url(https://2img.net/i.imgur.com/3SPxErN.png);}
+#magical {--besttag: url(https://2img.net/i.imgur.com/CeguKAP.png);}
